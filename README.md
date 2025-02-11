@@ -1,4 +1,4 @@
-# 🛍️ Storefront Portfolio with React & Node.js
+# 🛍️ Storefront Portfolio with React, Node.js & and Express.js
 
 A **full-stack e-commerce storefront** that dynamically displays products from multiple retailers using **React, Node.js, and Express.js**. This project covers **UX/UI design, frontend development, and backend integration** to create a functional and visually appealing storefront.
 
