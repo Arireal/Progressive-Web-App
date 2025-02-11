@@ -1,75 +1,59 @@
-<<<<<<< HEAD
-# Ecommerce-Storefront
-An eCommerce storefront built with React, Node.js, and Express.js for server-side data handling
-=======
-# Getting Started with Create React App
+# 🛍️ Storefront Portfolio with React & Node.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **full-stack e-commerce storefront** that dynamically displays products from multiple retailers using **React, Node.js, and Express.js**. This project covers **UX/UI design, frontend development, and backend integration** to create a functional and visually appealing storefront.
 
-## Available Scripts
+🚀 **Live Demo:** [Storefront Live](https://your-deployed-url.com)  
+🖥️ **Backend API:** [Hosted on Heroku](https://your-backend-url.com)  
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Dynamic Product Display:** Fetches and renders products from different retailers.
+- **Full-Stack Implementation:** React frontend, Node.js/Express backend.
+- **Server-Side Data Fetching:** Uses Express to serve product data from a JSON file or an API.
+- **Newsletter Subscription:** Handles email form submission using environment variables.
+- **Responsive Design:** Optimized for all screen sizes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🎨 UX/UI Process
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I designed the UX/UI based on a **user persona** to ensure the best experience.  
+Below is an initial **wireframe sketch** of the storefront:
 
-### `npm run build`
+📝 _Wireframe Sketch:_  
+![Wireframe Sketch](path-to-your-wireframe-image.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚙️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Tech          | Description                      |
+|--------------|----------------------------------|
+| **React**    | Frontend framework               |
+| **Node.js**  | Backend runtime                  |
+| **Express.js** | API & server handling          |
+| **Heroku**   | Backend deployment               |
+| **CSS**      | UI Styling                        |
 
-### `npm run eject`
+---
+## 📸 Screenshots
+Homepage UI Preview
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Installation & Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1️⃣ **Clone the repository**  
+```sh
+git clone https://github.com/Arireal/storefront.git
+cd storefront
+2️⃣ Install dependencies
+npm install
+3️⃣ Run the frontend & backend
+# Start frontend
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Start backend
+cd backend
+node server.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 8d8ee2f (Initial commit)
