@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+  padding-top: 20px;  /* Adjust as needed to give space above the logo */
+}
+
+.logo {
+  display: flex;
+  justify-content: center; /* Center the logo horizontally */
+  align-items: center;     /* Center the logo vertically */
+}
+
+.logo img {
+  max-width: 50%;  /* Ensure the logo scales down with the screen */
+  height: auto;     /* Maintain aspect ratio */
+  width: auto;      /* Allow it to scale up and down */
+  margin-bottom: 20px; /* Adjust the space between logo and filter */
+}

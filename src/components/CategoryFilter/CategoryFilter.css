@@ -1,0 +1,36 @@
+/* CategoryFilter.css */
+.category-filter {
+    display: flex;
+    overflow-x: auto;
+    padding: 16px;
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+  }
+  
+  .category-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .category-button:hover {
+    color: #9159ae;
+    background-color: #ffb426;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 20px;
+  }
+  
+  .category-button.active {
+    background-color: #ffb426;
+    border-radius: 20px;
+    color: #9159ae;
+  }

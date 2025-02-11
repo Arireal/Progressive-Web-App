@@ -1,0 +1,61 @@
+/* Footer.css */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 320px;
+}
+
+.footer-icon {
+  font-size: 24px;
+  color: #9159ae;
+  cursor: pointer;
+}
+
+.footer-icon :hover {
+  font-size: 24px;
+  color: #ffb426;
+  cursor: pointer;
+}
+.footer-icon.active {
+  color: #ffb426; /* Keep the active icon color */
+}
+.search-container {
+  position: absolute;
+  bottom: 80px; /* Position the search bar above the footer */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 300px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #9159ae;
+}

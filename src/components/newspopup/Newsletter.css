@@ -1,0 +1,109 @@
+.news-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 7rem;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.subscription-box {
+  background-color: #fff3d4;
+  border-radius: 40px;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure it takes up the full width of the container */
+}
+
+.newsletter-title {
+  font-size: 3.5rem;
+  font-family: "Times New Roman", serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  color: #000000;
+}
+
+.newsletter-subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+  line-height: 1.4;
+}
+
+.newsletter-signup-form {
+  max-width: 100%; /* Adjust to ensure it's responsive */
+  margin: 0 auto;
+  position: relative;
+}
+
+.newsletter-signup-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  padding-right: 50px;
+  border: none;
+  border-radius: 50px;
+  background-color: #ffa726;
+  color: #000;
+  font-size: 1rem;
+  outline: none;
+}
+
+.newsletter-signup-input::placeholder {
+  color: #000;
+  opacity: 0.8;
+}
+
+.newsletter-submit-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.newsletter-submit-btn:hover {
+  background-color: #333;
+}
+
+.newsletter-arrow {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .news-container {
+    padding: 3rem; /* Reduce padding on mobile */
+  }
+
+  .subscription-box {
+    padding: 2rem 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .newsletter-title {
+    font-size: 2.5rem; /* Smaller title on mobile */
+  }
+
+  .newsletter-subtitle {
+    font-size: 1rem; /* Smaller subtitle on mobile */
+  }
+
+  .newsletter-signup-input {
+    padding: 1rem;
+  }
+
+  .newsletter-submit-btn {
+    width: 30px;
+    height: 30px; /* Smaller button on mobile */
+  }
+}
