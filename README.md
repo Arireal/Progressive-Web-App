@@ -2,7 +2,9 @@
 
 A **full-stack e-commerce storefront** that dynamically displays products from multiple retailers using **React, Node.js, and Express.js**. This project covers **UX/UI design, frontend development, and backend integration** to create a functional and visually appealing storefront.
 
-🚀 **Live Demo:** [Storefront Live](https://your-deployed-url.com)  
+For the Backend I used a Polyrepo Setup: For this project, the frontend and backend are maintained in independent repositories. This approach, known as a polyrepo, offers a cleaner separation between concerns (frontend and backend) and allows for independent scaling and management of each part. It's an ideal choice for larger projects or when the frontend and backend are expected to evolve separately. This separation also enables more flexible deployment and easier collaboration between teams working on different parts of the system.
+
+🚀 **Live Demo:** [Storefront Live](https://www.adwstudium.com  
 🖥️ **Backend API:** [Hosted on Heroku](https://your-backend-url.com)  
 
 ---
@@ -10,6 +12,7 @@ A **full-stack e-commerce storefront** that dynamically displays products from m
 ## 📌 Features
 
 - **Dynamic Product Display:** Fetches and renders products from different retailers.
+- **Polyrepo Setup:** Cleaner separation between concerns (frontend and backend).
 - **Full-Stack Implementation:** React frontend, Node.js/Express backend.
 - **Server-Side Data Fetching:** Uses Express to serve product data from a JSON file or an API.
 - **Newsletter Subscription:** Handles email form submission using environment variables.
