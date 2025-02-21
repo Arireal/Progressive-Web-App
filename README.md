@@ -39,7 +39,7 @@ Below is an initial **wireframe sketch** of the storefront:
 | **React**    | Frontend framework               |
 | **Node.js**  | Backend runtime                  |
 | **Express.js** | API & server handling          |
-| **Heroku**   | Backend deployment               |
+| **Render**   | Backend deployment               |
 | **CSS**      | UI Styling                        |
 
 ---
