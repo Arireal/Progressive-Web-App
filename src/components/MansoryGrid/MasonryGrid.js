@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./masonrygrid.css";
-import "font-awesome/css/font-awesome.min.css";
+
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -8,7 +8,31 @@ const ProductList = () => {
   const [enteringProducts, setEnteringProducts] = useState([]); // Track products being added
   const [leavingProducts, setLeavingProducts] = useState([]); // Track products being removed
 
+  // Categories List
   const categories = ["All", "OAK Collection", "Spooky Season"];
+
+  // Drag-to-scroll functionality for category filter
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const filterRef = useRef(null);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - filterRef.current.offsetLeft);
+    setScrollLeft(filterRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => setIsDragging(false);
+  const handleMouseUp = () => setIsDragging(false);
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - filterRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust scroll speed
+    filterRef.current.scrollLeft = scrollLeft - walk;
+  };
 
   useEffect(() => {
     fetch("/productData.json")
@@ -35,26 +59,29 @@ const ProductList = () => {
 
   // Handle product slide-in effect when the category is changed
   useEffect(() => {
-    // Identify the products that are new to the current filter
     setEnteringProducts(filteredProducts);
-
-    // Set a timeout for the slide-out effect of leaving products
     setLeavingProducts(
       products.filter((product) => !filteredProducts.includes(product))
     );
 
-    // Clean up the leaving products after animation
     const timeoutId = setTimeout(() => {
       setLeavingProducts([]);
-    }, 300); // Adjust the duration to match the CSS animation duration
+    }, 300); // Match with CSS animation duration
 
     return () => clearTimeout(timeoutId);
   }, [activeCategory, filteredProducts, products]);
 
   return (
     <div>
-      {/* Category Buttons */}
-      <div className="category-filter">
+      {/* Category Buttons with Dragging */}
+      <div
+        className="category-filter"
+        ref={filterRef}
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+      >
         {categories.map((category) => (
           <button
             key={category}

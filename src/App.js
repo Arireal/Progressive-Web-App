@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import './App.css';
 import Header from './components/Header/Header';
 import './components/Header/header.css';
@@ -13,17 +15,18 @@ import Newsletter from './components/newspopup/Newsletter';
 import './components/newspopup/Newsletter.css';
 import AboutUs from './components/About/AboutUs';
 import './components/About/AboutUs.css';
+import Frontpage from './components/Frontpage/frontpage'; // ✅ Your new landing page
 
-function App() {
-  const [grid, setGrid] = useState('MasonryGrid'); // The current grid (MasonryGrid or ArtOptionsGrid)
-  const [isPageVisible, setIsPageVisible] = useState(true); // For animation control
+function MainApp() {
+  const [grid, setGrid] = useState('MasonryGrid');
+  const [isPageVisible, setIsPageVisible] = useState(true);
 
   const handlePlusClick = () => {
-    setIsPageVisible(false); // Set slide-out effect
+    setIsPageVisible(false);
     setTimeout(() => {
       setGrid('ArtOptionsGrid');
-      setIsPageVisible(true); // Set slide-in effect after transition
-    }, 500); // Match the slide-out duration
+      setIsPageVisible(true);
+    }, 500);
   };
 
   const handleHomeClick = () => {
@@ -53,15 +56,15 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="grid-container">
-  <div className={isPageVisible ? "slide-in" : "slide-out"}>
-    {grid === "MasonryGrid" && <MasonryGrid />}
-    {grid === "ArtOptionsGrid" && <ArtOptionsGrid />}
-    {grid === "Newsletter" && <Newsletter />}
-    {grid === "AboutUs" && <AboutUs />}
-  </div>
-</div>
 
+      <div className="grid-container">
+        <div className={isPageVisible ? "slide-in" : "slide-out"}>
+          {grid === "MasonryGrid" && <MasonryGrid />}
+          {grid === "ArtOptionsGrid" && <ArtOptionsGrid />}
+          {grid === "Newsletter" && <Newsletter />}
+          {grid === "AboutUs" && <AboutUs />}
+        </div>
+      </div>
 
       <Footer
         onPlusClick={handlePlusClick}
@@ -70,6 +73,17 @@ function App() {
         onUserClick={handleUserClick}
       />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Frontpage />} /> {/* 👈 Default landing page */}
+        <Route path="/main" element={<MainApp />} /> {/* 👈 Old experience lives here */}
+      </Routes>
+    </Router>
   );
 }
 

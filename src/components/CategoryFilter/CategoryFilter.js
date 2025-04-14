@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './CategoryFilter.css';
-import "font-awesome/css/font-awesome.min.css";
+
 
 function CategoryFilter() {
   const [activeCategory, setActiveCategory] = useState('All');

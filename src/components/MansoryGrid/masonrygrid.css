@@ -120,3 +120,22 @@
     opacity: 0;
   }
 }
+.category-filter {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar in IE/Edge */
+}
+
+.category-filter::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome/Safari */
+}
+
+.category-button {
+  flex: 0 0 auto;
+  padding: 10px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  user-select: none;
+}
