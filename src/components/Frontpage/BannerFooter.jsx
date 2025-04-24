@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Paintbrush, Home, Table, Instagram, } from "lucide-react";
 import { SiTiktok, SiRedbubble } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 
 export default function BannerFooter() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -58,9 +59,10 @@ export default function BannerFooter() {
           </a>
           
           {/* Menu List Icon */}
-          <a href="#" className="flex items-center justify-center p-2">
+          <Link to="/main" className="flex items-center justify-center p-2">
           <Table className="h-8 w-8 text-cyan-600" />
-          </a>
+        </Link>
+
           
           {/* Logo Icon */}
           <a href="#" className="flex items-center justify-center p-2">

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css';
-import Header from './components/Header/Header';
+import Header from './components/Header/new-header';
 import './components/Header/header.css';
 import './components/CategoryFilter/CategoryFilter.css';
 import MasonryGrid from './components/MansoryGrid/MasonryGrid';

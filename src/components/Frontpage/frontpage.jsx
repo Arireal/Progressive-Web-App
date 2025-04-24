@@ -4,7 +4,8 @@ import Herocomponent from './FrontpageHero';
 import BestSellers from './bestsellers';
 import ShopBy from './shopby';
 import SwCollection from './swcollection';
-import BannerFooter from './BannerFooter.jsx';
+import BannerFooter from './frontpageFooter';
+import SocialBanner from './onlybanner';
 
 
 export default function MobileLayout() {
@@ -43,6 +44,7 @@ export default function MobileLayout() {
       <BestSellers />
       <ShopBy />
       <SwCollection />
+      <SocialBanner  />
       <BannerFooter/>
 
     </div>
