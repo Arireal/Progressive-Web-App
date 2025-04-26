@@ -30,16 +30,22 @@ export default function FloralHeader() {
         
         {/* Social media icons - under the logo */}
         <div className="flex items-center justify-center gap-8 mb-10">
+          < a href="https://www.instagram.com/adwstudium/">
           <button className="text-white hover:text-purple-400 transition-colors">
             <Instagram size={22} />
           </button>
+          </a>
+          < a href="https://www.tiktok.com/@adwstudium">
           <button className="text-white hover:text-teal-400 transition-colors">
             <SiTiktok size={22} />
           </button>
+          </a>
+          < a href="https://www.redbubble.com/people/ADWStudiumShop/shop?asc=u">
           <button className="text-white hover:text-amber-400 transition-colors relative">
             <SiRedbubble  size={22} />
             
           </button>
+          </a>
         </div>
         
         

@@ -42,9 +42,11 @@ export default function CollectionGrid() {
         
         {/* Collection button at the intersection */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+        <a href="https://www.redbubble.com/people/adwstudiumshop/shop?artistUserName=adwstudiumshop&collections=4245050&iaCode=all-departments&sortOrder=top%20selling" target="_blank" rel="noopener noreferrer">
           <button className="rounded-full bg-amber-200 px-8 py-2 font-medium text-black shadow-lg transition hover:bg-amber-300">
             collection
           </button>
+          </a>
         </div>
       </div>
       
@@ -77,9 +79,11 @@ export default function CollectionGrid() {
         
         {/* CTA button */}
         <div className="absolute inset-0 flex items-center justify-center">
+        <a href=" https://www.redbubble.com/people/adwstudiumshop/shop?artistUserName=adwstudiumshop&collections=4245050&iaCode=all-departments&sortOrder=top%20selling" target="_blank" rel="noopener noreferrer">
           <button className="rounded-full bg-black px-8 py-3 font-medium text-white shadow-lg transition hover:bg-gray-800">
             shop now
           </button>
+          </a>
         </div>
       </div>
     </div>

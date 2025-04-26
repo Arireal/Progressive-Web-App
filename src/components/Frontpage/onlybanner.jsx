@@ -4,9 +4,10 @@ import { SiTiktok, SiRedbubble } from 'react-icons/si';
 
 export default function SocialMediaBanner() {
   return (
-    <div className="relative h-64 w-full bg-red-400">
+    <div className="relative h-64 w-full bg-red-400" >
       {/* This would be replaced with your actual background image */}
-      <div className="absolute inset-0 bg-red-400">
+      <div className="absolute inset-0"
+      style={{ backgroundColor: '#7859a6' }}>
         {/* Background image would go here */}
       </div>
       {/* Banner Content */}
@@ -15,15 +16,15 @@ export default function SocialMediaBanner() {
         {/* Social Media Icons */}
         <div className="flex items-center justify-center space-x-8">
           {/* Instagram Icon */}
-          <a href="#" className="text-white hover:text-gray-200">
+          <a href="https://www.instagram.com/adwstudium/" className="text-white hover:text-gray-200">
             <Instagram className="h-8 w-8" viewBox="0 0 24 24"/>
           </a>
           {/* TikTok Icon */}
-          <a href="#" className="text-white hover:text-gray-200">
+          <a href="https://www.tiktok.com/@adwstudium" className="text-white hover:text-gray-200">
             <SiTiktok className="h-8 w-8" viewBox="0 0 24 24"/>
           </a>
           {/* Redbubble Icon */}
-          <a href="#" className="text-white hover:text-gray-200">
+          <a href="https://www.redbubble.com/people/ADWStudiumShop/shop?asc=u" className="text-white hover:text-gray-200">
             <SiRedbubble className="h-8 w-8" viewBox="0 0 24 24"/>
           </a>
         </div>

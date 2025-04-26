@@ -8,66 +8,75 @@ export default function BestSellers() {
   const products = [
     { 
       id: 1, 
-      name: "Premium Gold Watch",
-      price: "$299.99",
-      likes: 474,
-      image: "/api/placeholder/300/300" 
+      name: "Iphone Case",
+      price: "$29.34",
+      likes: 654,
+      image: "imgs/springwhimsy/highlight.png",
+      url: "https://www.redbubble.com/i/iphone-case/Golden-Garden-Reverie-by-ADWStudiumShop/169726389.GENBX"
     },
     { 
       id: 2, 
-      name: "Designer Sunglasses",
-      price: "$149.99",
-      likes: 579,
-      image: "/api/placeholder/300/300" 
+      name: "Baseball Cap",
+      price: "$25.09",
+      likes: 527,
+      image: "imgs/springwhimsy/cap.png",
+      url: "https://www.redbubble.com/i/hat/Wish-Upon-the-Breeze-by-ADWStudiumShop/169650877.NJ288"
     },
     { 
       id: 3, 
-      name: "Leather Wallet",
-      price: "$89.99",
+      name: "Iphone Case",
+      price: "$29.34",
       likes: 623,
-      image: "/api/placeholder/300/300" 
+      image: "imgs/springwhimsy/flowerfileds-bs.png",
+      url: "https://www.redbubble.com/i/iphone-case/Golden-Sun-and-Flower-Fields-by-ADWStudiumShop/169726952.GENBX"
     },
     { 
       id: 4, 
-      name: "Silk Scarf",
-      price: "$79.99",
-      likes: 512,
-      image: "/api/placeholder/300/300" 
+      name: "Classic T-Shirt", 
+      price: "$23.52",
+      likes: 1803,
+      image: "imgs/springwhimsy/springtshirt.png",
+      url: "https://www.redbubble.com/i/t-shirt/Whispers-of-Spring-by-ADWStudiumShop/169724964.WFLAH"
     },
     { 
       id: 5, 
-      name: "Wireless Headphones",
-      price: "$199.99",
-      likes: 498,
-      image: "/api/placeholder/300/300" 
+      name: "Samsung Galaxy Phone Case", 
+      price: "$37.40",
+      likes: 169,
+      image: "imgs/springwhimsy/ghostparade.png",
+      url: "https://www.redbubble.com/i/samsung-case/Ghost-Parade-on-Purple-by-ADWStudiumShop/164657297.LGDWM"
     },
     { 
       id: 6, 
-      name: "Premium Perfume",
-      price: "$129.99",
-      likes: 467,
-      image: "/api/placeholder/300/300" 
+      name: "Throw Pillow",
+      price: "$22.37",
+      likes: 422,
+      image: "imgs/springwhimsy/pillow.png",
+      url: "https://www.redbubble.com/i/throw-pillow/Fluttering-Tapestry-by-ADWStudiumShop/169724578.5X2YF"
     },
     { 
       id: 7, 
-      name: "Cashmere Sweater",
-      price: "$189.99",
-      likes: 432,
-      image: "/api/placeholder/300/300" 
+      name: "Mouse Pad",
+      price: "$21.94",
+      likes: 479,
+      image: "imgs/springwhimsy/pad.png",
+      url: "https://www.redbubble.com/i/mouse-pad/Bugs-Parade-by-ADWStudiumShop/169720582.G1FH6"
     },
     { 
       id: 8, 
-      name: "Leather Belt",
-      price: "$59.99",
-      likes: 386,
-      image: "/api/placeholder/300/300" 
+      name: "Classic T-Shirt",
+      price: "$23.52",
+      likes: 924,
+      image: "imgs/springwhimsy/beetle.png",
+      url: "https://www.redbubble.com/i/t-shirt/Midnight-Blossom-Beetle-by-ADWStudiumShop/169721665.WFLAH"
     },
     { 
       id: 9, 
-      name: "Silver Bracelet",
-      price: "$119.99",
-      likes: 412,
-      image: "/api/placeholder/300/300" 
+      name: "Sticker",
+      price: "$2.87",
+      likes: 2079,
+      image: "imgs/springwhimsy/sticker.png",
+      url: "https://www.redbubble.com/i/sticker/Soft-Petals-Bright-Dreams-by-ADWStudiumShop/169726544.EJUG5"
     },
   ];
 
@@ -162,11 +171,12 @@ export default function BestSellers() {
           {products.map((product) => (
             <div
               key={product.id}
-              className="relative flex min-w-[300px] flex-col items-center justify-between rounded-3xl bg-gradient-to-b from-amber-400 to-amber-500 shadow-xl transition-transform hover:scale-105"
-              style={{ height: '450px' }}
+              className="relative flex min-w-[300px] flex-col items-center justify-between rounded-2xl transition-transform hover:scale-105 overflow-hidden"
+              style={{ backgroundColor: '#fcb246', height: '550px' }}
             >
-              {/* Product Image */}
-              <div className="relative h-64 w-full overflow-hidden rounded-t-3xl">
+              
+              {/* Product Image - Updated for portrait format */}
+              <div className="relative w-full overflow-hidden rounded-t-3xl mt-4" style={{ height: '380px' }}>
                 <img 
                   src={product.image} 
                   alt={product.name}
@@ -183,14 +193,17 @@ export default function BestSellers() {
               </div>
               
               {/* Product Info */}
-              <div className="flex w-full flex-col px-6 py-4">
+              <div className="flex w-full flex-col px-6 py-2">
                 <h3 className="text-xl font-bold text-black">{product.name}</h3>
                 <p className="mb-4 text-lg font-semibold text-black">{product.price}</p>
                 
-                {/* CTA Button */}
-                <button className="mt-auto w-full rounded-full bg-black py-3 text-lg font-medium text-white transition hover:bg-gray-800">
+                {/* CTA Button with link */}
+                <a 
+                  href={product.url}
+                  className="mt-auto block w-full rounded-full bg-black py-3 text-center text-lg font-medium text-white transition hover:bg-gray-800"
+                >
                   View Product
-                </button>
+                </a>
               </div>
             </div>
           ))}

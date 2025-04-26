@@ -47,7 +47,7 @@ const ArtOptionsGrid = () => {
 
   return (
     <div>
-      <h1 className="artgrid-title">Pick an Art, See All Its Products</h1>
+      <h1 className="artgrid-title text-center mt-8">Pick an Art, See All Its Products</h1>
       <div className={`artgrid ${isVisible ? "slide-in" : "slide-out"}`}>
         {sortedArtworks.map((artwork) => (
           <div key={artwork.id} className="box">

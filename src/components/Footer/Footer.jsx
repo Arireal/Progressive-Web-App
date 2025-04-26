@@ -73,11 +73,12 @@ function NavigationFooter({ onPlusClick, onHomeClick, onGiftClick, onUserClick }
           </div>
           
           {/* Mail) */}
+          <a href="mailto:adwstudium@gmail.com">
           <div className="flex items-center justify-center p-2 cursor-pointer">
-            <Mail
-              className={`h-8 w-8 text-cyan-600`} 
-            />
+            <Mail className="h-8 w-8 text-cyan-600" />
           </div>
+        </a>
+
         </div>
       </div>
       {/* Space for the fixed footer */}
